@@ -1,260 +1,199 @@
-# RPM_FAILSAFE_AND_FALLBACK_PROTOCOLS.md  
-**Remote Patient Monitoring (RPM) Failsafe & Fallback Protocols**
+# CLINICAL_RESPONSE_SLA_MATRIX.md  
+**Clinical Response Service Level Agreement (SLA) Matrix**
 
 ---
 
 ## 1. Purpose
 
-This document defines the **Failsafe and Fallback Protocols** governing Remote Patient Monitoring (RPM) systems within the NeuroGrid ecosystem.
+This document defines the **Clinical Response Service Level Agreement (SLA) Matrix** for NeuroGrid Remote Patient Monitoring (RPM) systems.
 
-Its purpose is to ensure:
-- Continuous patient safety during system degradation
-- Predictable behavior during failures
-- Clear transition paths from automated to human oversight
-- Regulatory-aligned resilience for clinical monitoring systems
+Its purpose is to:
+- Establish time-bound clinical response expectations
+- Align AI-generated alerts with human clinical action
+- Prevent delayed intervention risks
+- Provide auditable, regulator-aligned response standards
 
-Failsafe mechanisms are treated as **clinical safety infrastructure**, not optional features.
+This matrix converts alerts into **enforceable clinical obligations**, not suggestions.
 
 ---
 
 ## 2. Scope
 
-This protocol applies to:
-- All RPM data ingestion pipelines
-- AI-assisted monitoring and alert systems
-- Clinical decision-support interfaces
+This SLA matrix applies to:
+- All RPM alerting systems
 - Post-operative monitoring workflows
-- DAO-governed RPM deployments
+- AI-assisted clinical decision support
+- Human-in-the-loop escalation pathways
+- DAO-governed clinical deployments
 
-It covers failures affecting:
-- Data availability
-- Model integrity
-- System availability
-- Network connectivity
-- Governance or authorization layers
+It governs **response time**, **responsibility**, and **action requirements**.
 
 ---
 
-## 3. Core Safety Principles
+## 3. SLA Design Principles
 
-RPM failsafe design adheres to the following principles:
+Clinical SLAs are designed around:
 
-1. **Patient Safety Supremacy** – Safety overrides automation
-2. **Graceful Degradation** – Systems degrade predictably
-3. **Human Override Priority** – Clinician authority is absolute
-4. **Fail-Closed for Automation** – AI halts when uncertain
-5. **Fail-Open for Communication** – Alerts continue where possible
-6. **Traceability** – All failover events are logged
-
----
-
-## 4. Failure Classification
-
-### 4.1 Failure Types
-
-| Category | Description |
-|------|-------------|
-| Data Failure | Missing, delayed, or corrupted patient data |
-| Model Failure | Drift, instability, or invalid outputs |
-| System Failure | Service outages or infrastructure issues |
-| Network Failure | Connectivity loss or latency |
-| Governance Failure | Authorization or policy enforcement failure |
-| External Dependency Failure | Third-party service disruption |
+1. **Patient Safety First**
+2. **Time-Critical Prioritization**
+3. **Clear Role Accountability**
+4. **Automation as Trigger, Not Actor**
+5. **Escalation Over Suppression**
+6. **Auditability and Enforcement**
 
 ---
 
-### 4.2 Failure Severity Levels
+## 4. Alert Severity Classification
 
-| Level | Description |
-|-----|-------------|
-| Level 1 | Non-critical degradation |
-| Level 2 | Reduced monitoring reliability |
-| Level 3 | Loss of automated monitoring |
-| Level 4 | Patient safety risk |
-| Level 5 | Critical system failure |
+| Level | Name | Description |
+|-----|------|-------------|
+| L0 | Informational | Non-actionable observation |
+| L1 | Low | Minor deviation, no immediate risk |
+| L2 | Moderate | Potential clinical concern |
+| L3 | High | Probable patient risk |
+| L4 | Critical | Immediate patient safety threat |
 
-Severity determines escalation and fallback behavior.
-
----
-
-## 5. Failsafe Activation Conditions
-
-Failsafe protocols activate when:
-- Data integrity checks fail
-- Model confidence thresholds are breached
-- Model drift exceeds approved limits
-- Alert logic produces inconsistent results
-- System health checks fail
-- Governance constraints cannot be enforced
-
-Activation may be automatic or manually invoked.
+Severity is assigned **before** SLA timing begins.
 
 ---
 
-## 6. Automated Failsafe Responses
+## 5. Clinical Response SLA Matrix
 
-Upon activation, the system must:
+| Alert Level | Initial Response Time | Escalation Time | Responsible Party | Required Action |
+|-----------|----------------------|----------------|------------------|----------------|
+| L0 | No SLA | N/A | System / Clinician (optional) | Documentation only |
+| L1 | ≤ 24 hours | ≤ 48 hours | Assigned Clinician | Review, annotate |
+| L2 | ≤ 4 hours | ≤ 8 hours | Clinician / Nurse | Clinical assessment |
+| L3 | ≤ 30 minutes | ≤ 60 minutes | Senior Clinician | Intervention decision |
+| L4 | ≤ 5 minutes | Immediate | Emergency Team | Emergency response |
 
-1. Suspend affected AI inference processes  
-2. Preserve last known valid patient state  
-3. Lock model version changes  
-4. Prevent automated clinical recommendations  
-5. Generate internal safety alerts  
-6. Log the failure event immutably  
-
-Automation **must not attempt self-correction** without authorization.
-
----
-
-## 7. Fallback Operating Modes
-
-### 7.1 Human-in-the-Loop Mode
-- AI inference disabled
-- Clinician review required for all alerts
-- Manual data interpretation enabled
-- Elevated monitoring flags applied
+Failure to meet SLA triggers automatic escalation.
 
 ---
 
-### 7.2 Reduced Monitoring Mode
-- Limited vital parameters monitored
-- Conservative alert thresholds applied
-- Increased false-negative avoidance
-- Explicit uncertainty labeling
+## 6. Escalation Rules
+
+If response SLA is breached:
+1. Alert escalates to next clinical authority
+2. Notification redundancy is activated
+3. Governance logs breach event
+4. Incident is flagged for audit
+
+Escalation **cannot be disabled** by automation.
 
 ---
 
-### 7.3 Observation-Only Mode
-- Data collection continues
-- No alerts generated
-- Data clearly marked as non-actionable
-- Clinician notified of reduced capability
+## 7. AI Role in SLA Enforcement
+
+AI systems may:
+- Classify alert severity
+- Start SLA timers
+- Monitor response status
+- Trigger escalation logic
+
+AI systems **may not**:
+- Dismiss alerts
+- Extend SLA deadlines
+- Override clinician authority
 
 ---
 
-### 7.4 System Suspension Mode
-- Monitoring halted
-- Patient and clinical teams notified
-- Manual alternatives required
-- Deployment flagged as inactive
+## 8. Human Accountability Mapping
+
+| Role | SLA Responsibility |
+|----|-------------------|
+| Primary Clinician | Initial review & response |
+| Secondary Clinician | Escalation backup |
+| Clinical Lead | High-severity decisions |
+| Emergency Team | Critical intervention |
+| DAO Oversight | SLA compliance monitoring |
+
+Responsibility is role-based, not individual-dependent.
 
 ---
 
-## 8. Alert Handling During Fallback
+## 9. Fallback & Degraded Mode SLAs
 
-During fallback:
-- All alerts must include a **system degradation notice**
-- Alert severity is escalated conservatively
-- Duplicate alert suppression is disabled
-- Alert delivery prioritizes reliability over optimization
+During system degradation:
+- SLAs become **more conservative**
+- Escalation times shorten
+- Human review becomes mandatory
+- AI confidence requirements increase
 
----
-
-## 9. Clinician Authority & Override
-
-Clinicians may:
-- Override automated suspensions
-- Manually escalate or suppress alerts
-- Initiate system shutdown
-- Request emergency model rollback
-
-Clinician actions take precedence over all automated controls.
+Fallback SLAs override standard SLAs automatically.
 
 ---
 
-## 10. Patient Communication Requirements
+## 10. SLA Breach Classification
 
-If fallback impacts patient monitoring:
-- Patients must be informed promptly
-- Communication must be clear and non-alarming
-- Limitations must be explicitly stated
-- Alternative care instructions must be provided
+| Breach Type | Description |
+|-----------|-------------|
+| Minor | Response delay without harm |
+| Major | Response delay with increased risk |
+| Critical | Delay contributing to adverse event |
 
-Patient communication is governed by:
-- RPM_PATIENT_COMMUNICATION_BOUNDARIES.md
-
----
-
-## 11. Governance & DAO Controls
-
-Failsafe events are subject to:
-- Automatic governance logging
-- Post-incident DAO review
-- Compliance verification
-- Mandatory audit inclusion
-
-Emergency overrides may bypass standard voting but must be reviewed retrospectively.
+Breach severity informs governance action.
 
 ---
 
-## 12. Recovery & Reinstatement
+## 11. Governance & DAO Enforcement
 
-Before returning to normal operation:
-- Root cause analysis must be completed
-- Corrective actions validated
-- Model or system re-certified
-- Governance approval obtained
-- Clinician sign-off recorded
+SLA breaches trigger:
+- Automatic DAO notification
+- Inclusion in audit reports
+- Potential governance votes
+- Corrective action mandates
 
-Silent recovery is prohibited.
-
----
-
-## 13. Testing & Validation
-
-Failsafe mechanisms must be:
-- Tested during pre-deployment
-- Simulated during audits
-- Re-validated after system changes
-- Included in post-market surveillance
-
-Failure to test failsafes constitutes a compliance breach.
+Repeated breaches may:
+- Suspend system components
+- Restrict deployments
+- Trigger compliance review
 
 ---
 
-## 14. Logging & Auditability
+## 12. Audit & Reporting
 
-All failsafe events must record:
-- Trigger condition
-- Timestamp
-- Affected systems
-- Actions taken
-- Duration
-- Recovery steps
+SLA metrics tracked include:
+- Mean response time
+- Escalation frequency
+- Breach rates by severity
+- Resolution outcomes
 
-Logs must be immutable and audit-accessible.
-
----
-
-## 15. Regulatory Alignment
-
-This protocol aligns with:
-- FDA RPM post-market safety expectations
-- ISO 14971 risk management principles
-- IEC 62304 software lifecycle standards
-- EU MDR clinical safety requirements
-- AI Act high-risk system resilience requirements
+Reports are:
+- Periodic
+- Immutable
+- Regulator-accessible
 
 ---
 
-## 16. Ethical Position
+## 13. Regulatory Alignment
 
-> **When automation fails, responsibility does not.**
-
-Failsafes exist to protect patients, clinicians, and the integrity of care.
+This SLA framework aligns with:
+- FDA expectations for RPM responsiveness
+- ISO 14971 risk controls
+- IEC 62304 operational requirements
+- EU MDR vigilance standards
+- Post-market clinical follow-up obligations
 
 ---
 
-## 17. Binding Status
+## 14. Ethical Position
+
+> **An alert without a response is a failure of care.**
+
+SLAs exist to ensure alerts lead to action, not ambiguity.
+
+---
+
+## 15. Binding Status
 
 This document is:
 - Mandatory for all RPM deployments
-- Enforceable through governance controls
-- Subject to periodic review
-- Amendable only via compliant DAO procedures
+- Enforced via governance controls
+- Audited continuously
+- Amendable only through DAO procedures
 
 ---
 
 ### Status
-**Active – RPM Failsafe & Fallback Protocol**
-
+**Active – Clinical Response SLA Matrix**
