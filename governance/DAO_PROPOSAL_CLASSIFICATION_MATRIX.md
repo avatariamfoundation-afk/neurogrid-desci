@@ -1,224 +1,273 @@
-# SYSTEM_FAILSAFE_ARCHITECTURE.md  
-**Safety-Critical System Resilience & Fail-Safe Design Standard**
+# DAO_PROPOSAL_CLASSIFICATION_MATRIX.md  
+**Governance Proposal Typology, Risk Tiering & Decision Controls**
 
 ---
 
 ## 1. Purpose
 
-This document defines the **mandatory fail-safe architecture** governing all NeuroGrid systems, including AI models, smart contracts, data pipelines, and clinical interfaces.
+This document defines the **official classification system** for all DAO proposals within the NeuroGrid ecosystem.
 
-The objective is to ensure that **no single failure, anomaly, or compromise** can result in uncontrolled clinical risk, patient harm, or regulatory breach.
+Its purpose is to:
+- Prevent unsafe or inappropriate governance actions
+- Apply proportional scrutiny based on risk
+- Ensure regulatory, ethical, and clinical safeguards
+- Maintain decision traceability and accountability
+
+No proposal may proceed without classification.
 
 ---
 
 ## 2. Core Principle
 
-> **In the presence of uncertainty, the system must fail safely, not silently.**
+> **Not all proposals are equal. Governance power must scale with risk.**
 
-When safety, integrity, or validity cannot be guaranteed, the system must:
-- Degrade gracefully
-- Default to conservative behavior
-- Escalate to human oversight
+Higher-risk proposals require:
+- Greater scrutiny
+- Longer review periods
+- Higher voting thresholds
+- Stronger oversight controls
 
 ---
 
 ## 3. Scope
 
-This architecture applies to:
-- Core smart contracts
-- AI inference engines
-- Remote Patient Monitoring (RPM)
-- Alerting and escalation systems
-- DAO governance infrastructure
-- Data ingestion and preprocessing layers
+This matrix applies to proposals affecting:
+- Smart contracts
+- AI models
+- Clinical systems
+- Data governance
+- Token economics
+- DAO structure and authority
 
 ---
 
-## 4. Failsafe Design Objectives
+## 4. Proposal Classification Levels
 
-All systems must achieve:
-- Deterministic failure behavior
-- Prevention of cascading failures
-- Containment of faults
-- Preservation of auditability
-- Protection of patient safety
+All proposals fall into **one of five classes**:
 
----
-
-## 5. Failsafe Hierarchy
-
-Failsafes operate in layered order:
-
-1. **Model-Level Failsafes**
-2. **System-Level Failsafes**
-3. **Human Oversight Failsafes**
-4. **Governance-Level Failsafes**
-5. **Emergency Shutdown Mechanisms**
-
-Each layer must operate independently.
+| Class | Name | Risk Level | Impact Scope |
+|-----|------|----------|-------------|
+| I | Informational | Minimal | Non-binding |
+| II | Operational | Low | Internal processes |
+| III | Technical | Moderate | System components |
+| IV | Safety-Critical | High | Clinical or AI safety |
+| V | Constitutional | Extreme | Governance authority |
 
 ---
 
-## 6. AI Model-Level Failsafes
+## 5. Class I – Informational Proposals
 
-AI models must:
-- Refuse inference on invalid or out-of-distribution inputs
-- Halt output if confidence falls below threshold
-- Trigger alerts on drift or anomaly detection
-- Default to “no decision” when integrity is compromised
+**Description:**
+- Reports
+- Disclosures
+- Transparency updates
+- Research summaries
 
-Models may not extrapolate silently.
+**Characteristics:**
+- No execution authority
+- No system changes
+- No vote required (acknowledgment only)
 
----
-
-## 7. Alerting Failsafes (RPM)
-
-For Remote Patient Monitoring:
-- Alerts must include confidence scoring
-- Ambiguous signals must escalate to human review
-- Repeated low-confidence alerts must trigger investigation
-- Alert suppression must be logged and justified
-
-False reassurance is prohibited.
+**Examples:**
+- Audit reports
+- Post-incident summaries
+- Research publications
 
 ---
 
-## 8. Data Integrity Failsafes
+## 6. Class II – Operational Proposals
 
-Systems must:
-- Validate incoming data
-- Detect corruption, tampering, or incompleteness
-- Reject unverifiable data
-- Quarantine suspect datasets
+**Description:**
+- Process adjustments
+- Documentation updates
+- Non-clinical operational changes
 
-No model may operate on unverified data.
+**Risk Level:** Low
 
----
+**Requirements:**
+- Simple majority vote
+- Short voting window
+- No compliance escalation
 
-## 9. Infrastructure Failsafes
-
-Infrastructure-level protections include:
-- Redundant execution paths
-- Graceful degradation modes
-- Automated rollback capability
-- Secure isolation of compromised components
-
-Hard failures must not propagate.
+**Examples:**
+- DAO workflow updates
+- Documentation standards
+- Community initiatives
 
 ---
 
-## 10. Smart Contract Failsafes
+## 7. Class III – Technical Proposals
 
-Core contracts must include:
-- Emergency pause mechanisms
-- Restricted upgrade paths
-- Role-based access control
-- Immutable audit trails
+**Description:**
+- Technical system changes without direct clinical impact
 
-Contract failures must default to safe states.
+**Risk Level:** Moderate
 
----
+**Requirements:**
+- Supermajority vote
+- Technical review required
+- Auditability confirmation
 
-## 11. Human-in-the-Loop Failsafes
-
-Human oversight is mandatory when:
-- Model confidence is insufficient
-- Alerts conflict or escalate
-- System anomalies are detected
-- Ethical or regulatory ambiguity arises
-
-Humans retain final authority in all clinical-impacting actions.
+**Examples:**
+- Smart contract upgrades (non-core)
+- Infrastructure changes
+- Non-clinical AI pipeline updates
 
 ---
 
-## 12. Governance-Level Failsafes
+## 8. Class IV – Safety-Critical Proposals
 
-DAO governance must:
-- Allow emergency intervention
-- Prevent hostile or rushed voting
-- Enable temporary suspension of systems
-- Log and disclose emergency actions
+**Description:**
+- Proposals that may impact:
+  - AI inference behavior
+  - RPM alerting
+  - Clinical decision support
+  - Patient data handling
 
-Governance must favor safety over decentralization speed.
+**Risk Level:** High
 
----
+**Requirements:**
+- Extended review period
+- Safety and ethics review
+- Human oversight confirmation
+- High supermajority threshold
 
-## 13. Emergency Shutdown Protocols
-
-The system must support:
-- Immediate halt of AI inference
-- Suspension of alert generation
-- Lockdown of data writes
-- Read-only preservation of logs
-
-Emergency shutdowns must be reversible only through formal review.
-
----
-
-## 14. Failover & Recovery
-
-Recovery procedures must include:
-- Root cause analysis
-- Controlled restart sequences
-- Validation before reactivation
-- Post-incident reporting
-
-Automatic recovery without validation is prohibited.
+**Examples:**
+- AI model threshold changes
+- Alert escalation logic
+- Data inclusion criteria for models
 
 ---
 
-## 15. Testing & Validation
+## 9. Class V – Constitutional Proposals
 
-Failsafe mechanisms must be:
-- Regularly tested
-- Simulated under stress scenarios
-- Reviewed after system updates
-- Audited by independent reviewers
+**Description:**
+- Changes to DAO authority, scope, or limits
 
-Untested failsafes are considered non-existent.
+**Risk Level:** Extreme
 
----
+**Requirements:**
+- Longest review period
+- Formal compliance review
+- Legal and ethical assessment
+- Highest voting threshold
 
-## 16. Logging & Traceability
-
-All failsafe activations must be:
-- Timestamped
-- Immutable
-- Attributed to triggering cause
-- Retained for regulatory review
-
-No silent failures permitted.
+**Examples:**
+- DAO emergency powers modification
+- Governance scope expansion
+- Token governance authority changes
 
 ---
 
-## 17. Regulatory Alignment
+## 10. Classification Decision Matrix
 
-This architecture aligns with:
-- FDA safety-by-design principles
-- EU MDR / IVDR safety requirements
-- ISO 14971 (risk management)
-- IEC 62304 (medical software lifecycle)
-- GMLP fail-safe expectations
+| Proposal Impact | Classification |
+|----------------|---------------|
+| Informational only | Class I |
+| Internal ops, no system impact | Class II |
+| Technical, non-clinical | Class III |
+| AI / clinical / patient risk | Class IV |
+| Governance authority | Class V |
+
+Misclassification is prohibited.
 
 ---
 
-## 18. Prohibited Practices
+## 11. Reclassification Rules
+
+A proposal must be **up-classed** if:
+- New risks are identified
+- Scope expands during review
+- Regulatory implications emerge
+- Clinical relevance becomes apparent
+
+Down-classing requires justification and review.
+
+---
+
+## 12. Voting Thresholds
+
+| Class | Voting Threshold |
+|-----|----------------|
+| I | None |
+| II | >50% |
+| III | ≥66% |
+| IV | ≥75% |
+| V | ≥85% |
+
+Abstentions do not count toward approval.
+
+---
+
+## 13. Review Bodies by Class
+
+| Class | Required Review |
+|-----|----------------|
+| I | None |
+| II | DAO Ops Review |
+| III | Technical Review Committee |
+| IV | Ethics + Safety Oversight |
+| V | Full Governance & Compliance Review |
+
+---
+
+## 14. Execution Constraints
+
+- Class IV and V proposals may not auto-execute
+- Human confirmation is mandatory
+- Emergency override mechanisms apply
+- Execution delays are enforced
+
+---
+
+## 15. Transparency & Disclosure
+
+All proposals must include:
+- Classification declaration
+- Risk justification
+- Review outcomes
+- Voting results
+
+Public disclosure is mandatory.
+
+---
+
+## 16. Prohibited Governance Actions
 
 The following are prohibited:
-- Silent degradation
-- Unlogged auto-recovery
-- Fully autonomous emergency decisions
-- Overriding failsafes for performance gains
+- Bundling mixed-class proposals
+- Fast-tracking safety-critical changes
+- Retroactive classification
+- Bypassing required reviews
 
 ---
 
-## 19. Enforcement
+## 17. Enforcement
 
-Failure to comply may result in:
-- Deployment blocks
-- Forced rollback
-- Governance intervention
-- Regulatory disclosure
+Violations may result in:
+- Proposal invalidation
+- Governance sanctions
+- Emergency suspension
+- Regulatory notification
+
+---
+
+## 18. Regulatory Alignment
+
+This framework aligns with:
+- DAO governance best practices
+- FDA risk-based controls
+- EU MDR governance expectations
+- AI Act proportional oversight principles
+
+---
+
+## 19. Amendment Rules
+
+Changes to this matrix require:
+- Class V proposal
+- Full compliance review
+- Public disclosure
 
 ---
 
@@ -227,10 +276,9 @@ Failure to comply may result in:
 This document is:
 - Mandatory
 - Enforceable
-- Safety-critical
+- Governance-critical
 
 ---
 
 ### Status
-**Active – System Failsafe Architecture**
-
+**Active – DAO Proposal Classification Matrix**
