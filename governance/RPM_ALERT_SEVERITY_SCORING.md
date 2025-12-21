@@ -1,4 +1,4 @@
-# RPM Alert Severity Scoring Framework
+# RPM_ALERT_SEVERITY_SCORING.md
 
 ## 1. Purpose
 This document defines the standardized framework for scoring, classifying, and responding to Remote Patient Monitoring (RPM) alerts within the DeSci-governed RPM subsystem. The objective is to ensure consistent clinical prioritization, patient safety, regulatory defensibility, and decentralized auditability across all RPM-generated alerts.
