@@ -1,165 +1,256 @@
-# DAO_SANCTIONS_AND_REMEDIATION.md
+DAO_SANCTIONS_AND_REMEDIATION.md
 
-## 1. Purpose
-This document defines the formal sanctions and remediation framework governing misconduct, non-compliance, and harmful actions within the NeuroGrid DAO.
+Governance Enforcement, Accountability & Corrective Action Framework
 
-Its purpose is to ensure accountability, proportional enforcement, system integrity, and protection of patients, contributors, and the public.
+1. Purpose
 
----
+This document defines the mandatory sanctions and remediation framework governing misconduct, non-compliance, and harmful actions within the NeuroGrid DAO ecosystem.
 
-## 2. Scope
-This policy applies to:
-- All DAO members
-- Contributors and operators
-- Governance delegates
-- Committee members
-- Contractors and affiliates
+Its objectives are to:
 
-It covers actions across technical, clinical, governance, funding, and ethical domains.
+Enforce accountability
 
----
+Protect patient and system safety
 
-## 3. Sanctionable Conduct
-Sanctions may be imposed for, but are not limited to:
+Preserve governance integrity
 
-- Governance manipulation or vote coercion
-- Clinical safety violations
-- AI override abuse
-- Data misuse or suppression
-- Conflict of interest violations
-- Regulatory non-compliance
-- Malicious code deployment
-- Funding misappropriation
-- Repeated negligence or failure to remediate risks
+Ensure proportional, documented enforcement
 
-Intentional or reckless conduct is treated as aggravated.
+Prevent recurrence of harmful behavior
 
----
+Sanctions are treated as a governance safety mechanism, not a punitive preference.
 
-## 4. Sanction Categories
-Sanctions are tiered based on severity:
+2. Scope
 
-### Level 1 – Corrective Actions
-- Formal warning
-- Mandatory training
-- Increased monitoring
-- Temporary role restrictions
+This framework applies to:
 
-### Level 2 – Restrictive Sanctions
-- Suspension of voting rights
-- Removal from committees
-- Funding access restrictions
-- Loss of override privileges
+DAO members
 
-### Level 3 – Severe Sanctions
-- Permanent role removal
-- DAO expulsion
-- Token governance exclusion
-- Public disclosure of misconduct
-- Regulatory notification
+Governance delegates
 
----
+Committee members
 
-## 5. Sanction Determination Process
-Sanctions are determined through:
+Core, MedIntel, and DeSci contributors
 
-1. Incident identification
-2. Evidence preservation
-3. Independent review
-4. Severity and impact assessment
-5. Governance deliberation
-6. Formal sanction resolution
+Contractors and affiliated operators
 
-Due process and documentation are mandatory.
+It covers actions across:
 
----
+Governance
 
-## 6. Remediation Objectives
-Remediation aims to:
-- Eliminate harm
-- Prevent recurrence
-- Restore trust
-- Correct system weaknesses
-- Re-align behavior with DAO principles
+Clinical AI operations
 
-Sanctions without remediation are incomplete.
+Data stewardship
 
----
+Funding and treasury controls
 
-## 7. Remediation Measures
-Remediation may include:
+Ethics and compliance systems
 
-- Technical fixes or rollbacks
-- Policy updates
-- Process redesign
-- Clinical safety audits
-- Data correction or restoration
-- Governance structure changes
-- Independent oversight introduction
+3. Foundational Enforcement Principles
 
-Completion is required for sanction closure.
+NeuroGrid sanctions operate on five principles:
 
----
+Proportionality – Sanctions match severity and impact
 
-## 8. Sanction Enforcement
+Due Process – Evidence-based, documented decisions
+
+Safety Priority – Patient and system safety override all interests
+
+Non-Retaliation – Protection for reporters and investigators
+
+Remediation First – Correction is mandatory, not optional
+
+4. Sanctionable Conduct
+
+Sanctions may be imposed for:
+
+Governance manipulation or vote coercion
+
+Abuse of emergency or override powers
+
+Clinical safety violations
+
+AI model misuse or concealment of risk
+
+Data misuse, suppression, or unauthorized access
+
+Conflict of interest violations
+
+Regulatory non-compliance
+
+Malicious or negligent code deployment
+
+Funding misappropriation
+
+Repeated failure to implement corrective actions
+
+Intentional, reckless, or concealed conduct is treated as aggravated.
+
+5. Sanction Severity Levels
+5.1 Level 1 – Corrective Sanctions
+
+Applied for minor or first-time violations:
+
+Formal warning
+
+Mandatory retraining
+
+Increased monitoring
+
+Temporary role limitations
+
+5.2 Level 2 – Restrictive Sanctions
+
+Applied for serious or repeated violations:
+
+Suspension of voting rights
+
+Removal from governance roles
+
+Loss of funding access
+
+Revocation of override authority
+
+5.3 Level 3 – Severe Sanctions
+
+Applied for critical or malicious violations:
+
+Permanent role removal
+
+DAO membership expulsion
+
+Token governance exclusion
+
+Public disclosure of misconduct
+
+Mandatory regulatory notification
+
+6. Sanction Determination Process
+
+All sanctions follow a defined process:
+
+Incident identification
+
+Evidence preservation
+
+Independent review
+
+Severity and impact assessment
+
+Governance or safety council determination
+
+Formal sanction resolution and documentation
+
+Emergency safety sanctions may be enacted immediately.
+
+7. Mandatory Remediation Requirements
+
+Sanctions must include remediation actions, which may involve:
+
+Technical fixes or model rollbacks
+
+Clinical safety audits
+
+Data correction or restoration
+
+Policy or process redesign
+
+Governance structure changes
+
+Independent oversight or review
+
+Sanctions are not considered closed until remediation is verified.
+
+8. Enforcement & Execution
+
 Once approved:
-- Sanctions take effect immediately
-- Enforcement is automated where possible
-- Non-compliance escalates severity
-- No retroactive immunity is permitted
 
-Enforcement actions are immutable and logged.
+Sanctions take effect immediately
 
----
+Enforcement is automated where possible
 
-## 9. Appeal Mechanism
+Actions are logged immutably
+
+Non-compliance escalates sanction severity
+
+No retroactive immunity is permitted.
+
+9. Appeal Mechanism
+
 Sanctioned parties may:
-- Submit a single appeal
-- Provide new evidence only
-- Appeal within defined timeframes
 
-Appeals do not suspend urgent safety sanctions.
+Submit one formal appeal
 
----
+Provide new or overlooked evidence only
 
-## 10. Transparency and Disclosure
-Sanctions and remediation outcomes:
-- Are recorded on-chain where applicable
-- Are included in DAO transparency reports
-- May be disclosed publicly if risk-related
+Adhere to defined submission timelines
 
-Patient safety incidents require mandatory disclosure.
+Appeals do not suspend urgent safety-related sanctions.
 
----
+10. Transparency & Disclosure
 
-## 11. Regulatory Coordination
+All sanctions and remediation outcomes:
+
+Are logged in governance records
+
+Are included in transparency reporting
+
+May be publicly disclosed if safety-relevant
+
+Patient-identifiable data is never disclosed.
+
+11. Regulatory Coordination
+
 Where applicable, sanctions trigger:
-- Regulatory notification
-- Clinical authority engagement
-- External audit coordination
-- Cross-border compliance actions
 
-DAO governance does not override law.
+Regulatory notifications
 
----
+Clinical authority engagement
 
-## 12. Non-Retaliation Clause
-No retaliation is permitted against:
-- Whistleblowers
-- Investigators
-- Compliance officers
-- Affected patients or clinicians
+External audits
 
-Retaliation itself constitutes sanctionable conduct.
+Cross-border compliance actions
 
----
+DAO governance does not override statutory obligations.
 
-## 13. Review and Updates
-This policy is reviewed:
-- Annually
-- After major enforcement actions
-- Following regulatory updates
-- Upon DAO structural changes
+12. Non-Retaliation Protection
 
+Retaliation against the following is strictly prohibited:
 
+Whistleblowers
 
+Investigators
+
+Ethics or compliance officers
+
+Clinicians raising safety concerns
+
+Retaliation constitutes a sanctionable offense.
+
+13. Review & Update Cycle
+
+This framework is reviewed:
+
+Annually
+
+After major enforcement actions
+
+Following regulatory changes
+
+Upon governance restructuring
+
+14. Binding Status
+
+This document is:
+
+Binding across all NeuroGrid DAOs
+
+Enforced through technical and procedural controls
+
+Amendable only via compliant governance processes
+
+Subject to internal and external audit
+
+Status
+
+Active – Mandatory Sanctions & Remediation Framework
