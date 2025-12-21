@@ -1,4 +1,4 @@
-# AI Override Abuse Prevention Policy
+# AI_OVERRIDE_ABUSE_PREVENTION_POLICY.md
 
 ## 1. Purpose
 This policy establishes safeguards to prevent misuse, overuse, or manipulation of AI emergency override mechanisms within the NeuroGrid ecosystem.
