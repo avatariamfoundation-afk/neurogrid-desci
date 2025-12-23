@@ -1,176 +1,257 @@
-# POST_MARKET_MODEL_SURVEILLANCE_REPORTING.md
-**Post-Deployment AI Model Monitoring & Reporting Framework**
+DAO_ROLE_AND_AUTHORITY.md
+Document Status
 
----
+Classification: Critical Governance Document
+Applies To: NeuroGrid DAO, Clinical AI Infrastructure, DeSci Operations
+Version: 1.0
+Authority Level: Binding
+Review Cycle: Annual or upon governance upgrade
+Custodian: DAO Governance Council
 
-## 1. Purpose
+1. Purpose
 
-This document defines the **post-market surveillance and reporting requirements** for all AI models deployed within the NeuroGrid ecosystem.
+This document formally defines roles, authority boundaries, decision rights, and accountability structures within the NeuroGrid DAO. Its purpose is to ensure:
 
-Its objectives are to:
-- Detect safety, performance, and compliance issues after deployment
-- Ensure continuous regulatory alignment
-- Enable early identification of adverse trends
-- Maintain public and institutional trust in clinical AI systems
+Clear separation between clinical, scientific, technical, and governance authority
 
-Post-market surveillance is treated as a **regulatory and patient-safety obligation**, not a performance optimization activity.
+Regulatory compliance (medical AI, clinical decision independence)
 
----
+Prevention of authority ambiguity, governance capture, or DAO overreach
 
-## 2. Scope
+Auditability and enforceability of DAO decisions
 
-This framework applies to:
-- All AI models deployed in clinical or RPM contexts
-- All MedIntel inference pipelines
-- All models registered via DeSci governance
-- All updates, retraining events, and configuration changes
+2. Governance Principles
 
-It spans **Core auditability**, **MedIntel execution**, and **DeSci compliance oversight**.
+The DAO operates under the following non-negotiable principles:
 
----
+Clinical Independence Supremacy
+No DAO vote, token holder, or governance body may override licensed clinical judgment.
 
-## 3. Surveillance Objectives
+Separation of Powers
+Governance, execution, validation, and oversight are structurally separated.
 
-Post-market surveillance must achieve:
-1. Early detection of safety risks
-2. Identification of model drift or degradation
-3. Verification of intended-use adherence
-4. Detection of unintended behaviors
-5. Regulatory-ready evidence generation
+Least Authority Necessary
+Roles are scoped to the minimum authority required.
 
----
+Immutable Accountability
+All role actions are logged, attributable, and auditable.
 
-## 4. Mandatory Monitoring Dimensions
+Regulatory Primacy
+In conflicts between DAO preference and regulatory obligation, regulation prevails.
 
-All deployed models must be monitored across the following dimensions:
+3. Role Taxonomy Overview
 
-### 4.1 Safety Signals
-- Adverse event correlations
-- False negative escalation events
-- Alert suppression anomalies
-- Emergency override frequency
+Roles are divided into four authority domains:
 
-### 4.2 Performance Metrics
-- Accuracy and precision trends
-- Sensitivity and specificity
-- Confidence score stability
-- Error distribution shifts
+Governance Authority
 
-### 4.3 Clinical Alignment
-- Concordance with clinician decisions
-- Override rates and rationale
-- Missed escalation reviews
+Clinical Authority
 
-### 4.4 Operational Integrity
-- Data pipeline continuity
-- Input signal quality
-- Latency and availability metrics
+Scientific / Technical Authority
 
----
+Operational Authority
 
-## 5. Reporting Triggers
+No individual or entity may simultaneously hold conflicting authority roles.
 
-Surveillance reports must be generated when:
-- Safety thresholds are breached
-- Performance deviates beyond approved limits
-- Model drift is detected
-- Significant configuration changes occur
-- Regulatory authorities request disclosure
+4. Governance Roles
+4.1 DAO Token Holders
 
-Critical events require **immediate reporting**.
+Authority:
 
----
+Vote on high-level governance proposals
 
-## 6. Reporting Frequency
+Ratify policy frameworks
 
-| Report Type | Frequency |
-|-----------|-----------|
-| Routine Surveillance Summary | Quarterly |
-| Safety Signal Review | Monthly |
-| Drift Assessment | Continuous |
-| Adverse Event Report | Immediate |
-| Regulatory Disclosure | As required |
+Elect governance councils
 
----
+Explicit Limitations:
 
-## 7. Report Contents
+No authority over clinical decisions
 
-Each surveillance report must include:
-- Model identifier and version
-- Deployment context
-- Monitoring period
-- Detected issues (if any)
-- Impact assessment
-- Corrective or preventive actions
-- Status of remediation
+No access to patient-level data
 
-Patient-identifiable data is **strictly excluded**.
+No direct system control rights
 
----
+4.2 Governance Council
 
-## 8. Escalation & Remediation
+Authority:
 
-If surveillance identifies a material risk:
-- Model escalation protocols are triggered
-- Ethics and compliance review is mandatory
-- Deployment suspension may occur
-- Model rollback or retirement may be required
+Propose governance upgrades
 
-All actions must be logged and auditable.
+Enforce DAO policies
 
----
+Resolve governance disputes
 
-## 9. Audit & Traceability
+Trigger audits and investigations
 
-Surveillance activities must be:
-- Fully traceable to model versions
-- Linked to change control records
-- Retained per governance record policies
-- Accessible for independent audit
+Limitations:
 
----
+Cannot modify clinical models
 
-## 10. Prohibited Practices
+Cannot influence medical outcomes
 
-The following are prohibited:
-- Ignoring negative surveillance signals
-- Selective reporting of favorable data
-- Delaying disclosures for reputational reasons
-- Modifying monitoring criteria without approval
-- Using surveillance data for marketing claims
+Cannot override safety vetoes
 
----
+4.3 Ethics & Compliance Committee
 
-## 11. Regulatory Alignment
+Authority:
 
-This framework aligns with:
-- EU MDR post-market surveillance requirements
-- FDA SaMD post-market guidance
-- EU AI Act lifecycle monitoring obligations
-- ISO 14971 risk management
-- ISO/IEC 62304 software lifecycle standards
+Interpret regulatory obligations
 
----
+Issue compliance rulings
 
-## 12. Ethical Position
+Suspend DAO actions that violate law or ethics
 
-> **Deployment is not the end of responsibility;  
-> it is the beginning of accountability.**
+Escalate to regulators if required
 
-Continuous surveillance is essential to ethical clinical AI.
+Veto Power: Yes (Compliance-based only)
 
----
+5. Clinical Authority Roles
+5.1 Clinical Oversight Board
 
-## 13. Binding Status
+Authority:
 
-This document is:
-- Mandatory for all deployed models
-- Enforced through compliance mechanisms
-- Subject to regulatory inspection
-- Amendable only via approved governance process
+Define clinical use constraints
 
----
+Approve clinical deployment contexts
 
-### Status
-**Active – Post-Market Model Surveillance & Reporting Framework**
+Validate clinical safety frameworks
 
+Absolute Independence:
+
+Decisions are non-voteable by DAO
+
+Immune to token-based governance pressure
+
+5.2 Licensed Clinicians (End Users)
+
+Authority:
+
+Final clinical decision-making
+
+Interpretation of AI outputs
+
+Override or ignore model recommendations
+
+Protection Clause:
+No DAO mechanism may penalize clinicians for independent judgment.
+
+6. Scientific & Technical Roles
+6.1 Model Steward Council
+
+Authority:
+
+Oversee model lifecycle governance
+
+Approve model updates
+
+Validate performance metrics
+
+Constraints:
+
+Cannot approve deployment without clinical clearance
+
+Cannot bypass post-market surveillance triggers
+
+6.2 Data Custodians
+
+Authority:
+
+Enforce data access rules
+
+Manage anonymization and federated learning pipelines
+
+Restrictions:
+
+No governance voting rights
+
+No clinical authority
+
+7. Operational Roles
+7.1 DAO Operators
+
+Authority:
+
+Execute approved governance actions
+
+Maintain infrastructure uptime
+
+Constraints:
+
+No policy creation authority
+
+No discretionary system changes
+
+7.2 Audit & Transparency Officers
+
+Authority:
+
+Conduct internal audits
+
+Publish transparency reports
+
+Verify role compliance
+
+8. Authority Conflict Resolution
+
+In the event of authority conflict, the following hierarchy applies:
+
+Regulatory Law
+
+Clinical Independence
+
+Ethics & Compliance Rulings
+
+Clinical Oversight Board
+
+DAO Governance
+
+Operational Execution
+
+DAO votes are automatically invalidated if they violate higher-order authority.
+
+9. Role Assignment & Revocation
+
+Role assignment requires multi-sig approval
+
+All roles have defined term limits
+
+Emergency revocation is permitted for:
+
+Regulatory breach
+
+Ethical violation
+
+Security compromise
+
+All changes are immutably logged.
+
+10. Audit & Enforcement
+
+Role actions are subject to continuous audit
+
+Violations trigger:
+
+Automatic suspension
+
+Governance review
+
+Regulatory escalation if required
+
+11. Amendments
+
+This document may only be amended by:
+
+Governance Council proposal
+
+Ethics & Compliance approval
+
+Ratification vote
+
+External regulatory compatibility confirmation
+
+12. Binding Declaration
+
+This document is binding across all DAO layers, smart contracts, operational procedures, and community actions.
+
+Failure to comply constitutes a governance breach
