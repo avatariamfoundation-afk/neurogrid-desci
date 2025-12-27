@@ -1,4 +1,4 @@
-# DATA RETENTION AND ARCHIVAL POLICY
+# DATA_RETENTION_AND_ARCHIVAL_POLICY.md
 
 ## 1. PURPOSE
 This policy defines mandatory requirements for the retention, archival, and secure disposal of all data assets within the DeSci repository, ensuring regulatory compliance, scientific integrity, auditability, and long-term research reproducibility.
