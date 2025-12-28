@@ -1,4 +1,4 @@
-# DAO Emergency Veto and Kill-Switch Policy
+# DAO_EMERGENCY_VETO_AND_KILL-SWITCH_POLICY.md
 
 ## 1. Purpose
 This policy establishes a binding emergency veto and kill-switch mechanism for DAO-governed systems, models, protocols, and smart contracts. It exists to enable rapid intervention in the event of critical safety, ethical, legal, or systemic failures while preserving decentralized governance principles.
