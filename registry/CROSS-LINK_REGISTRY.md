@@ -1,4 +1,4 @@
-# CROSS_LINK_REGISTRY.md  
+# CROSS-LINK_REGISTRY.md  
 **Cross-Repository Integrity & Traceability Framework**
 
 ---
