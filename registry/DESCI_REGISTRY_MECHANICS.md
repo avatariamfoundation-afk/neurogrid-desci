@@ -28,8 +28,28 @@ This standard applies to all DeSci artifacts, including:
 All artifacts are **off-chain by default** and **on-chain by reference only**.
 
 ---
+## 3. Cost Governance & Enforcement
 
-## 3. Architectural Position
+All registry operations defined in this document are governed by the
+**Cost Ceiling Policy**.
+
+This includes:
+- Registry anchor writes
+- Validation attestations
+- Research trace commitments
+- Batch submission mechanics
+
+Hard gas ceilings, storage constraints, and batching requirements
+are enforced as defined in:
+
+→ `COST_CEILING_POLICY.md`
+
+Any registry interaction that violates hard ceilings MUST revert.
+Soft ceiling violations MUST trigger batching or deferral.
+
+---
+
+## 4. Architectural Position
 
 DeSci Registry operates as a **downstream consumer** of NeuroGrid Core.
 
@@ -44,7 +64,7 @@ All authority resolution occurs at **CORE level**.
 
 ---
 
-## 4. Artifact Identity Model
+## 5. Artifact Identity Model
 
 Each DeSci artifact MUST be represented by:
 
@@ -58,7 +78,7 @@ The hash is the **sole canonical identifier**.
 
 ---
 
-## 5. Mandatory Validation Requirements
+## 6. Mandatory Validation Requirements
 
 Before registry anchoring, the following validations are required:
 
@@ -78,7 +98,7 @@ Artifacts without required validation **MUST NOT** be registered.
 
 ---
 
-## 6. Registry Submission Flow
+## 7. Registry Submission Flow
 
 1. Artifact prepared off-chain
 2. Required validations completed
@@ -91,7 +111,7 @@ No step may be skipped.
 
 ---
 
-## 7. Core Anchoring Rules
+## 8. Core Anchoring Rules
 
 All DeSci registry entries must be anchored using:
 
@@ -107,7 +127,7 @@ The registry record hash MUST include:
 
 ---
 
-## 8. Cross-Link Requirements
+## 9. Cross-Link Requirements
 
 Cross-links are mandatory when:
 
@@ -120,7 +140,7 @@ Cross-links must be anchored using:
 
 ---
 
-## 9. Versioning and Supersession
+## 10. Versioning and Supersession
 
 DeSci artifacts are **append-only**.
 
@@ -133,7 +153,7 @@ Withdrawal is handled via **status annotations**, not erasure.
 
 ---
 
-## 10. Access and Visibility
+## 11. Access and Visibility
 
 Registry metadata is:
 - Publicly readable
@@ -147,7 +167,7 @@ Underlying data access is governed separately by:
 
 ---
 
-## 11. Compliance Alignment
+## 12. Compliance Alignment
 
 This mechanism aligns with:
 
@@ -159,7 +179,7 @@ This mechanism aligns with:
 
 ---
 
-## 12. Prohibited Actions
+## 13. Prohibited Actions
 
 The DeSci Registry MAY NOT:
 
@@ -173,7 +193,7 @@ Violations constitute a **governance breach**.
 
 ---
 
-## 13. Audit and Traceability
+## 14. Audit and Traceability
 
 Every registry entry must be:
 
