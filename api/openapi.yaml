@@ -1,1 +1,26 @@
+openapi: 3.0.3
+info:
+  title: NeuroGrid DeSci API
+  version: 1.0.0
+
+paths:
+  /research/artifacts:
+    get:
+      summary: List research artifacts
+      responses:
+        "200":
+          description: Artifact list
+
+  /research/trace/{artifactId}:
+    get:
+      summary: Retrieve research trace
+      parameters:
+        - name: artifactId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Trace returned
 
