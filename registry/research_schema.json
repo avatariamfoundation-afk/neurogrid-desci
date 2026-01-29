@@ -1,1 +1,16 @@
+{
+  "research_id": "string",
+  "title": "string",
+  "principal_investigator": "string",
+  "institution": "string",
+  "domain": "biomedical | ai | systems | ethics",
+  "risk_level": "low | medium | high",
+  "status": "draft | submitted | approved | rejected",
+  "created_at": "ISO-8601",
+  "metadata": {
+    "summary": "string",
+    "intended_use": "string",
+    "regulatory_notes": "string"
+  }
+}
 
