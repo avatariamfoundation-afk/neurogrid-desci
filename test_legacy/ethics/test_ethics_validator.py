@@ -1,5 +1,5 @@
 import pytest
-from src.ethics.ethics_validator import EthicsValidator
+from src.desci.ethics.ethics_validator import EthicsValidator
 
 def test_ethics_rejection():
     validator = EthicsValidator()
