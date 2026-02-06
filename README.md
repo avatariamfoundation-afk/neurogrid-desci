@@ -1,3 +1,9 @@
+## Role in the NeuroGrid System
+This repository represents the silent DeSci root layer.
+➡️ See full system context: NeuroGrid SYSTEM_OVERVIEW.md
+
+---
+
 ## NeuroGrid – DeSci Layer
 Decentralized Science Governance & Provenance Framework
 Silent Root Repository
