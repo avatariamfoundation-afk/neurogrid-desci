@@ -6,6 +6,8 @@ Silent Root Repository
 
 ## Executive Summary
 The NeuroGrid DeSci Layer is a non-executing, governance-centric repository that defines how decentralized science, medical research coordination, and ethical oversight integrate with the NeuroGrid protocol.
+The DeSci layer defines governance without execution.
+
 This repository is intentionally silent:
 
 No smart contracts
